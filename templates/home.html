@@ -1,5 +1,7 @@
 <!-- templates/home.html -->
 {% extends '_base.html' %}
+{% load static %}
+
 {% block title %}Home{% endblock title %}
 
 
@@ -9,13 +11,14 @@
 
 <p>Welcome to the homepage of our awesome site. You can read more about our company on the <a href="#">about page</a>.</p>
 
+<img class="bookcover" src="{% static 'images/dfp.png' %}">
+
 {% if user.is_authenticated %}
-    HI {{ user.email }}!
+    <p>HI {{ user.email }}!</p>
     <p><a href="{% url 'logout' %}">Log out</a></p>
 {% else %}
     <p>You're not logged in</p> 
-    <a href="{% url 'login' %}">Log in</a>
-    <a href="{% url 'signup' %}">SIgn up</a>
+    <p><a href="{% url 'login' %}">Log in</a> | <a href="{% url 'signup' %}">SIgn up</a></p>
 {% endif %}
 
 {% endblock main_content %}
