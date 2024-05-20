@@ -1,6 +1,19 @@
 <!-- templates/home.html -->
 {% extends '_base.html' %}
 {% block title %}Home{% endblock title %}
+
+
 {% block main_content %}
+
 <h1>Homepage</h1>
+
+<p>Welcome to the homepage of our awesome site. You can read more about our company on the <a href="#">about page</a>.</p>
+
+{% if user.is_authenticated %}
+    HI {{ user.email }}!
+{% else %}
+    <p>You're not logged in</p>
+    <a href="{% url 'login' %}">Log in</a>
+{% endif %}
+
 {% endblock main_content %}
