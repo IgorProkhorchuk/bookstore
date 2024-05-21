@@ -6,3 +6,12 @@ h1 {
     height: 300px;
     width: auto;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    color: tomato;
+}
