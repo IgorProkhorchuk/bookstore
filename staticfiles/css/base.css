@@ -6,3 +6,14 @@ h1 {
     height: 300px;
     width: auto;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+div {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
