@@ -8,7 +8,8 @@ django = "~=3.1.0"
 psycopg2-binary = "*"
 django-crispy-forms = "*"
 django-allauth = "*"
-environs = {extras = ["django"], version = "*"}
+environs = {extras = ["django"] }
+pillow = "*"
 
 [dev-packages]
 
